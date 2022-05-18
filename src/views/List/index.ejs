@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Service Provider</title>
+    <link rel="stylesheet" href="../../public/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- <button id="reset" title="Click để khôi phục dữ liệu ban đầu">Reset</button> -->
+        <table id="myTable">
+            <thead>
+                <tr class="headerRow">
+                    <th>
+                        STT
+                    </th>
+                    <th title="Click để sắp xếp theo mã sinh viên">
+                        ID
+                        <!-- <span class="arrow"></span> -->
+                    </th>
+                    <th title="Click để sắp xếp theo họ tên">
+                        TÊN
+                        <!-- <span class="arrow"></span> -->
+                    </th>
+                    <th title="Click để sắp xếp theo họ tên">
+                        GHI CHÚ
+                        <!-- <span class="arrow"></span> -->
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (var i = 0; i < ServiceProviders.length; i++) { %>
+                    <tr>
+                        <td><%= i + 1 %></td>
+                        <td><%= ServiceProviders[i]._id %></td>
+                        <td><%= ServiceProviders[i].name %></td>
+                        <td><a href="/admin/ServiceProvider/<%=ServiceProviders[i]._id%>">Chi tiết</a></td>
+                    </tr>    
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../../public/index.js"></script>
+</body>
+
+</html>

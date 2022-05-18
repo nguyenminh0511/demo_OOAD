@@ -1,0 +1,32 @@
+<!DOCTYPE html><html><head>
+    <title>Danh sách Service Provider</title>
+    <meta charset="utf-8"/>
+    <link rel="StyleSheet"  href="../../public/style.css"/>
+</head>
+<body>
+    <div class="container">
+    <table class="sortable" id="data">
+        <thead>
+            <h2>Quản lý Service Provider </h2>
+            <tr>
+                <th>STT</th>
+                <th>ID</th>
+                <th>Tên cửa hàng</th>
+                <th>Ghi chú</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for (var i = 0; i < ServiceProviders.length; i++) { %>
+                <tr>
+                    <td><%= i + 1 %></td>
+                    <td><%= ServiceProviders[i]._id %></td>
+                    <td><%= ServiceProviders[i].name %></td>
+                    <td><a href="/admin/ServiceProvider/<%=ServiceProviders[i]._id%>">Chi tiết</a></td>
+                </tr>    
+            <% } %>
+        </tbody>
+    </table>
+    <!-- <script src="script.js"></script> -->
+    </div>
+</body>
+</html>

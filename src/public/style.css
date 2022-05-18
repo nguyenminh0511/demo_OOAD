@@ -1,0 +1,178 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+ body {
+    height: 100%;
+    margin: 0;
+    background-image: url(uav1.png);
+    background-size: cover;
+}
+ 
+.container{
+   margin: 30% 20%;
+}
+h2{
+    margin: 5% 30%;  
+}
+table.sortable  {
+	border-collapse: collapse;
+    border: solid 2px black;
+    width: 100%;
+}
+table.sortable td {
+	border: solid 2px black;
+    text-align: center;
+}
+
+table.sortable th {
+	background-color: #d1c6c6;
+	border: solid 2px black;
+}
+
+table.sortable th.sortcolumn {
+	cursor:pointer;
+}
+
+table.sortable th.sortcolumn span.row::after {
+	content: "\21C5";
+}
+
+table.sortable th.asc span.row::after {
+	content: "\21E1";
+    color: red;
+    font-weight: bold;
+}
+
+table.sortable th.desc span.row::after {
+	content: "\21E3";
+    color: red;
+    font-weight: bold;
+}
+hai */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(to top, #49a09d, #5f2c82) fixed;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.container {
+    top: 20%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+table {
+    width: 800px;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.headerRow:hover {
+    cursor: pointer;
+}
+
+th, td {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+th {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white
+}
+
+a:hover {
+    color: blue
+}
+
+thead th {
+    background-color: #55608f;
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+tbody td {
+    position: relative;
+    text-align: center;
+}
+
+tbody td:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -9999px;
+    bottom: -9999px;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+}
+
+th.asc .arrow::after {
+    content: "\21C8";
+}
+
+th.desc .arrow::after {
+    content: "\21CA";
+}
+
+.arrow::after {
+    content: "\21C5";
+}
+
+tr td:nth-child(3), tr td:nth-child(6) {
+    text-align: left;
+}
+
+tr td:nth-child(7) {
+    display: none;
+}
+
+#reset {
+    background-color: #EA4C89;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 14px;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin-bottom: 10px;
+    padding: 10px 16px;
+    text-align: center;
+}
+
+#reset:hover, #reset:focus {
+    background-color: #F082AC;
+}
+
+@media only screen and (max-width: 500px) {
+    table {
+        width: 375px;
+    }
+
+    body {
+        font-size: 7px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+  }

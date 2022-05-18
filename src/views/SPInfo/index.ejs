@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Service Provider</title>
+    <link rel="stylesheet" href="../../../public/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- <button id="reset" title="Click để khôi phục dữ liệu ban đầu">Reset</button> -->
+        <table id="myTable">
+            <tr>
+                <th>ID:</th>
+                <td><%= data._id %></td>
+              </tr>
+            <tr>
+              <th>Tên:</th>
+              <td><%= data.name %></td>
+            </tr>
+            <tr>
+                <th>Tên chủ:</th>
+                <td><%= data.username %></td>
+              </tr>
+            <tr>
+              <th>Địa chỉ:</th>
+              <td><%= data.location %></td>
+            </tr>
+            <tr>
+              <th>Điện thoại</th>
+              <td><%= data.phone %></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><%= data.email %></td>
+              </tr>
+          </table>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
