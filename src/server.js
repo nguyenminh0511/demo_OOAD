@@ -15,7 +15,7 @@ app.use('/public', express.static(path.join(__dirname, './public')));
 const SVRouter = require("./routers/SVRouter");
     
 app.get('/', (req, res) => {
-    res.json("Hello world!")
+    res.redirect('/admin/ServiceProvider');
 })
 
 app.use('/', SVRouter);
